@@ -5,10 +5,16 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    商品列表：
+                    套餐市场
                 </h1>
                 <h2 class="subtitle">
-                    没有余额的话,点击<a href="{% url 'sspanel:chargecenter' %}"><strong>这里</strong></a>可以去充值
+                    一、购买流程：<br>
+                    1. 开放直接捐赠充值时：<a href="/donate/" style="text-decoration: underline;"><strong>捐赠中心:支付获取充值码</strong></a> → <a href="/chargecenter/"  style="text-decoration: underline;"><strong>充值中心:用充值码充值余额</strong></a> → <a href="/shop/" style="text-decoration: underline;"><strong>套餐市场:用余额购买套餐</strong></a><br>
+                    2. 未开放捐赠充值时：<strong>其他渠道获取充值码</strong> → <a href="/chargecenter/" style="text-decoration: underline;"><strong>充值中心:用充值码充值余额</strong></a> → <a href="/shop/" style="text-decoration: underline;"><strong>套餐市场:用余额购买套餐</strong></a><br>
+                    二、使用须知：<br>
+                    1. 高等级套餐使用前请不要购买低等级套餐，否则等级将被覆盖。<br>
+                    2. 套餐购买后将累加账户永久流量，套餐到期不会清空，可留给以后其他套餐使用。<br>
+                    3. 流量用完请重新购买套餐。<br>
                 </h2>
             </div>
         </div>
@@ -18,13 +24,13 @@
     <nav class="level box">
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">用户名:</p>
+                <p class="heading">用户名</p>
                 <p class="title">{{ user }}</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
             <div>
-                <p class="heading">余额：</p>
+                <p class="heading">余额</p>
                 <p class="title">{{ user.balance }}</p>
             </div>
         </div>

@@ -31,7 +31,7 @@
 </div>
 <br /> {% if user.is_authenticated %}
 <div class="box">
-    <p class="title">欢迎小主: {{ user.username }}</p>
+    <p class="title">欢迎: {{ user.username }}</p>
     <p class="subtitle">点击下方按钮进入用户中心 </p>
     <button class="button">
         <a href="{% url 'sspanel:userinfo' %}">进入</a>
@@ -42,18 +42,18 @@
 <div class="column box ">
     {% settings_value "ALLOW_REGISTER" as allow_register %}
     {% if allow_register is True %}
-    <h1 class="title"> 注册注册</h1>
+    <h1 class="title">注册</h1>
     <h2 class="subtitle">没有账号？快去注册一个吧！</h2>
     <a class="button is-primary is-outlined" href="{% url 'sspanel:register' %}">注册</a>
     {% else %}
-    <h1 class="title"> 抱歉抱歉！</h1>
-    <h2 class="subtitle">暂时关闭注册了呢~</h2>
+    <h1 class="title">注册</h1>
+    <h2 class="subtitle">抱歉，暂时关闭注册了呢！</h2>
     {% endif %}
 </div>
 <br />
 <div class="column box ">
-    <h1 class="title"> 登录登录！</h1>
-    <h2 class="subtitle">有账号了？登录吧少年！</h2>
+    <h1 class="title">登录</h1>
+    <h2 class="subtitle">有账号了？登录开始使用服务！</h2>
     <a class="button is-danger is-outlined" href="{% url 'sspanel:login' %}">登录</a>
 </div>
 <br /> {% endif %} {% endblock main %}

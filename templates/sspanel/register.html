@@ -16,7 +16,7 @@
 </div>
 <div class="column is-12">
     <div class="box">
-        <h3 class="title">注册:</h3>
+        <h3 class="title">注册</h3>
         <form class="form" action="{% url 'sspanel:register' %}" method="post">
             {% csrf_token %}
             {% for field in form %}
@@ -32,10 +32,10 @@
             <hr>
             <div class="field is-grouped is-grouped-multiline">
                 <p class="control">
-                    <button type="submit" class="button is-primary is-outlined">注册吧少年！</button>
+                    <button type="submit" class="button is-primary is-outlined">提交注册</button>
                 </p>
                 <p class="control">
-                    <a class="button is-info is-outlined " href="{% url 'sspanel:login' %}">刚注册过了？</a>
+                    <a class="button is-info is-outlined " href="{% url 'sspanel:login' %}">返回登录</a>
                 </p>
             </div>
         </form>
